@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Databse\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Alquiler extends Model
@@ -18,18 +19,18 @@ class Alquiler extends Model
         'estado'
     ];
 
-    public function clientes()
+    public function cliente()
     {
         return $this->belongsTo(Cliente::class);
     }
 
-    public function empleados()
+    public function empleado()
     {
-        return $this-belongsTo(Empleado::class);
+        return $this->belongsTo(Empleado::class);
     }
 
-    public function alquiler_detalles()
+    public function alquilerDetalles()
     {
-        return $this-hasMany(AlquilerDetalle::class);
+        return $this->hasMany(AlquilerDetalle::class);
     }
 }
