@@ -19,12 +19,12 @@ class Equipo extends Model
         'estado'
     ];
 
-    public function categorias()
+    public function categoria()
     {
         return $this->belongsTo(Categoria::class);
     }
 
-    public function alquiler_detalles()
+    public function alquilerDetalles()
     {
         return $this->hasMany(AlquilerDetalle::class);
     }
