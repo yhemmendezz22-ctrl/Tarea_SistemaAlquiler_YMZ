@@ -19,7 +19,7 @@ class Cliente extends Model
 
     public function alquilers()
     {
-        return $this-hasMany(Alquiler::class);
+        return $this->hasMany(Alquiler::class);
     }
 
 }
